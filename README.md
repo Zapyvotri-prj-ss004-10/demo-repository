@@ -7,6 +7,9 @@ This code repository (or "repo") is designed to demonstrate the best GitHub has 
 
 The repo includes an `index.html` file (so it can render a web page), two GitHub Actions workflows, and a CSS stylesheet dependency.
 
+Python Django 
+https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Django
+
 Overview: Server-side website programming
 Next
 Django is an extremely popular and fully featured server-side web framework, written in Python. This module shows you why Django is one of the most popular web server frameworks, how to set up a development environment, and how to start using it to create your own web applications.
