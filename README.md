@@ -6,63 +6,195 @@
 This code repository (or "repo") is designed to demonstrate the best GitHub has to offer with the least amount of noise.
 
 The repo includes an `index.html` file (so it can render a web page), two GitHub Actions workflows, and a CSS stylesheet dependency.
+Django documentation¶
+Everything you need to know about Django.
 
-Python Django 
-https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Server-side/Django
+First steps¶
+Are you new to Django or to programming? This is the place to start!
 
-Overview: Server-side website programming
-Next
-Django is an extremely popular and fully featured server-side web framework, written in Python. This module shows you why Django is one of the most popular web server frameworks, how to set up a development environment, and how to start using it to create your own web applications.
+From scratch: Overview | Installation
 
-Prerequisites
-Before starting this module you don't need to have any knowledge of Django. Ideally, you would need to understand what server-side web programming and web frameworks are by reading the topics in our Server-side website programming first steps module.
+Tutorial: Part 1: Requests and responses | Part 2: Models and the admin site | Part 3: Views and templates | Part 4: Forms and generic views | Part 5: Testing | Part 6: Static files | Part 7: Customizing the admin site | Part 8: Adding third-party packages
 
-A general knowledge of programming concepts and Python is recommended, but is not essential to understanding the core concepts.
+Advanced Tutorials: How to write reusable apps | Writing your first contribution to Django
 
-Note: Python is one of the easiest programming languages for novices to read and understand. That said, if you want to understand this module better, there are numerous free books and tutorials available on the internet to help you out (new programmers might want to check out the Python for Non Programmers page on the python.org wiki).
+Getting help¶
+Having trouble? We’d like to help!
 
-Tutorials
-Django introduction
-In this first Django article we answer the question "What is Django?" and give you an overview of what makes this web framework special. We'll outline the main features, including some advanced functionality that we won't have time to cover in detail in this module. We'll also show you some of the main building blocks of a Django application, to give you an idea of what it can do before you set it up and start playing.
+Try the FAQ – it’s got answers to many common questions.
 
-Setting up a Django development environment
-Now that you know what Django is for, we'll show you how to set up and test a Django development environment on Windows, Linux (Ubuntu), and macOS — whatever common operating system you are using, this article should give you what you need to be able to start developing Django apps.
+Looking for specific information? Try the Index, Module Index or the detailed table of contents.
 
-Django Tutorial: The Local Library website
-The first article in our practical tutorial series explains what you'll learn, and provides an overview of the "local library" — an example website we'll be working through and evolving in subsequent articles.
+Not found anything? See FAQ: Getting Help for information on getting support and asking questions to the community.
 
-Django Tutorial Part 2: Creating a skeleton website
-This article shows how you can create a "skeleton" website project, which you can then go on to populate with site-specific settings, URLs, models, views, and templates.
+Report bugs with Django in our ticket tracker.
 
-Django Tutorial Part 3: Using models
-This article shows how to define models for the LocalLibrary website — models represent the data structures we want to store our app's data in, and also allow Django to store data in a database for us (and modify it later on). It explains what a model is, how it is declared, and some of the main field types. It also briefly shows a few of the main ways you can access model data.
+How the documentation is organized¶
+Django has a lot of documentation. A high-level overview of how it’s organized will help you know where to look for certain things:
 
-Django Tutorial Part 4: Django admin site
-Now that we've created models for the LocalLibrary website, we'll use the Django Admin site to add some "real" book data. First, we'll show you how to register the models with the admin site, then we'll show you how to login and create some data. At the end, we show some ways in which you can further improve the presentation of the admin site.
+Tutorials take you by the hand through a series of steps to create a web application. Start here if you’re new to Django or web application development. Also look at the “First steps”.
 
-Django Tutorial Part 5: Creating our home page
-We're now ready to add the code to display our first full page — a home page for the LocalLibrary that shows how many records we have of each model type, and provides sidebar navigation links to our other pages. Along the way we'll gain practical experience in writing basic URL maps and views, getting records from the database, and using templates.
+Topic guides discuss key topics and concepts at a fairly high level and provide useful background information and explanation.
 
-Django Tutorial Part 6: Generic list and detail views
-This tutorial extends our LocalLibrary website, adding list and detail pages for books and authors. Here we'll learn about generic class-based views, and show how they can reduce the amount of code you have to write for common use cases. We'll also go into URL handling in greater detail, showing how to perform basic pattern matching.
+Reference guides contain technical reference for APIs and other aspects of Django’s machinery. They describe how it works and how to use it but assume that you have a basic understanding of key concepts.
 
-Django Tutorial Part 7: Sessions framework
-This tutorial extends our LocalLibrary website, adding a session-based visit-counter to the home page. This is a relatively simple example, but it does show how you can use the session framework to provide persistent behavior for anonymous users on your own sites.
+How-to guides are recipes. They guide you through the steps involved in addressing key problems and use-cases. They are more advanced than tutorials and assume some knowledge of how Django works.
 
-Django Tutorial Part 8: User authentication and permissions
-In this tutorial we'll show you how to allow users to login to your site with their own accounts, and how to control what they can do and see based on whether or not they are logged in and their permissions. As part of this demonstration, we'll extend the LocalLibrary website, adding login and logout pages, and user- and staff-specific pages for viewing books that have been borrowed.
+The model layer¶
+Django provides an abstraction layer (the “models”) for structuring and manipulating the data of your web application. Learn more about it below:
 
-Django Tutorial Part 9: Working with forms
-In this tutorial we'll show you how to work with HTML Forms in Django, and in particular the easiest way to write forms to create, update and delete model instances. As part of this demonstration, we'll extend the LocalLibrary website so that librarians can renew books, and create, update, and delete authors using our own forms (rather than using the admin application).
+Models: Introduction to models | Field types | Indexes | Meta options | Model class
 
-Django Tutorial Part 10: Testing a Django web application
-As websites grow they become harder to test manually — not only is there more to test, but, as the interactions between components become more complex, a small change in one area can require many additional tests to verify its impact on other areas. One way to mitigate these problems is to write automated tests, which can easily and reliably be run every time you make a change. This tutorial shows how to automate unit testing of your website using Django's test framework.
+QuerySets: Making queries | QuerySet method reference | Lookup expressions
 
-Django Tutorial Part 11: Deploying Django to production
-Now you've created (and tested) an awesome LocalLibrary website, you're going to want to install it on a public web server so that it can be accessed by library staff and members over the internet. This article provides an overview of how you might go about finding a host to deploy your website, and what you need to do in order to get your site ready for production.
+Model instances: Instance methods | Accessing related objects
 
-Django web application security
-Protecting user data is an essential part of any website design. We previously explained some of the more common security threats in the article Web security — this article provides a practical demonstration of how Django's built-in protections handle such threats.
+Migrations: Introduction to Migrations | Operations reference | SchemaEditor | Writing migrations
 
-Assessments
-The following assessment will test your understanding of how to create a website using Django, as described in the tutorials listed above.
+Advanced: Managers | Raw SQL | Transactions | Aggregation | Search | Custom fields | Multiple databases | Custom lookups | Query Expressions | Conditional Expressions | Database Functions
+
+Other: Supported databases | Legacy databases | Providing initial data | Optimize database access | PostgreSQL specific features
+
+The view layer¶
+Django has the concept of “views” to encapsulate the logic responsible for processing a user’s request and for returning the response. Find all you need to know about views via the links below:
+
+The basics: URLconfs | View functions | Shortcuts | Decorators | Asynchronous Support
+
+Reference: Built-in Views | Request/response objects | TemplateResponse objects
+
+File uploads: Overview | File objects | Storage API | Managing files | Custom storage
+
+Class-based views: Overview | Built-in display views | Built-in editing views | Using mixins | API reference | Flattened index
+
+Advanced: Generating CSV | Generating PDF
+
+Middleware: Overview | Built-in middleware classes
+
+The template layer¶
+The template layer provides a designer-friendly syntax for rendering the information to be presented to the user. Learn how this syntax can be used by designers and how it can be extended by programmers:
+
+The basics: Overview
+
+For designers: Language overview | Built-in tags and filters | Humanization
+
+For programmers: Template API | Custom tags and filters | Custom template backend
+
+Forms¶
+Django provides a rich framework to facilitate the creation of forms and the manipulation of form data.
+
+The basics: Overview | Form API | Built-in fields | Built-in widgets
+
+Advanced: Forms for models | Integrating media | Formsets | Customizing validation
+
+The development process¶
+Learn about the various components and tools to help you in the development and testing of Django applications:
+
+Settings: Overview | Full list of settings
+
+Applications: Overview
+
+Exceptions: Overview
+
+django-admin and manage.py: Overview | Adding custom commands
+
+Testing: Introduction | Writing and running tests | Included testing tools | Advanced topics
+
+Deployment: Overview | WSGI servers | ASGI servers | Deploying static files | Tracking code errors by email | Deployment checklist
+
+The admin¶
+Find all you need to know about the automated admin interface, one of Django’s most popular features:
+
+Admin site
+
+Admin actions
+
+Admin documentation generator
+
+Security¶
+Security is a topic of paramount importance in the development of web applications and Django provides multiple protection tools and mechanisms:
+
+Security overview
+
+Disclosed security issues in Django
+
+Clickjacking protection
+
+Cross Site Request Forgery protection
+
+Cryptographic signing
+
+Security Middleware
+
+Internationalization and localization¶
+Django offers a robust internationalization and localization framework to assist you in the development of applications for multiple languages and world regions:
+
+Overview | Internationalization | Localization | Localized web UI formatting and form input
+
+Time zones
+
+Performance and optimization¶
+There are a variety of techniques and tools that can help get your code running more efficiently - faster, and using fewer system resources.
+
+Performance and optimization overview
+
+Geographic framework¶
+GeoDjango intends to be a world-class geographic web framework. Its goal is to make it as easy as possible to build GIS web applications and harness the power of spatially enabled data.
+
+Common web application tools¶
+Django offers multiple tools commonly needed in the development of web applications:
+
+Authentication: Overview | Using the authentication system | Password management | Customizing authentication | API Reference
+
+Caching
+
+Logging
+
+Sending emails
+
+Syndication feeds (RSS/Atom)
+
+Pagination
+
+Messages framework
+
+Serialization
+
+Sessions
+
+Sitemaps
+
+Static files management
+
+Data validation
+
+Other core functionalities¶
+Learn about some other core functionalities of the Django framework:
+
+Conditional content processing
+
+Content types and generic relations
+
+Flatpages
+
+Redirects
+
+Signals
+
+System check framework
+
+The sites framework
+
+Unicode in Django
+
+The Django open-source project¶
+Learn about the development process for the Django project itself and about how you can contribute:
+
+Community: Contributing to Django | The release process | Team organization | The Django source code repository | Security policies | Mailing lists and Forum
+
+Design philosophies: Overview
+
+Documentation: About this documentation
+
+Third-party distributions: Overview
+
+Django over time: API stability | Release notes and upgrading instructions | Deprecation Timeline
