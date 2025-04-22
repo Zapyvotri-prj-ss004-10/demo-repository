@@ -1,3 +1,4 @@
+#include <cstdlib>
 #define MINX 2
 #define MINY 2
 #define MAXX 35
