@@ -1,3 +1,8 @@
+#include <iostream>
+#include <conio.h>     
+#include <windows.h>   
+#include <cstdlib>  
+using namespace std;
 
 #define MINX 2
 #define MINY 2
@@ -29,16 +34,14 @@ void Dichuyen(int Huong, Point& Qua) {
     if (Huong == 1) A[0].y++;
     if (Huong == 2) A[0].x--;
     if (Huong == 3) A[0].y--;
-
+    
+////////////////////// Xu ly An moi
     if (A[0].x == Qua.x && A[0].y == Qua.y) {
         DoDai++; 
-
         Qua.x = rand() % (MAXX - MINX) + MINX;
         Qua.y = rand() % (MAXY - MINY) + MINY;
     }
 }
-
-
 int main() {
   
     Qua.x = rand() % (MAXX - MINX) + MINX;
