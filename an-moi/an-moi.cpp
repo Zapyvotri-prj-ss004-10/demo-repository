@@ -30,13 +30,19 @@ public:
   
     void Ve() {
         SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 6); 
-        for (int i = 0; i < DoDai; i++) {
-            gotoxy(A[i].x, A[i].y);
-            cout << "X";
-        }
-        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 10);
-    }
 
+        // Dau ran
+        gotoxy(A[0].x, A[0].y);
+        cout << "@";  
+
+        // Than ran
+        for (int i = 1; i < DoDai; i++) {
+            gotoxy(A[i].x, A[i].y);
+            cout << "X";  
+        }
+
+        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 10); 
+    }
 
     void XoaDuoi() {
         gotoxy(A[DoDai - 1].x, A[DoDai - 1].y);
@@ -98,7 +104,7 @@ public:
     }
 
     void Ve() {
-        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 10); 
+        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7); 
         gotoxy(x, y);
         cout << "*";
     }
@@ -158,6 +164,7 @@ int main() {
 
         if (r.AnMoi(m.x, m.y)) {
             m.TaoMoi(r);
+            Beep(800, 100);
         }
 
         r.Ve();

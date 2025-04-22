@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Snake_game\\an-moi\\",
+  "WorkspaceRootPath": "D:\\Snake_game\\demo-repository\\an-moi\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{162917FC-FFC3-4ABE-96DF-CFE6B7357972}|an-moi.vcxproj|D:\\Snake_game\\an-moi\\an-moi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{162917FC-FFC3-4ABE-96DF-CFE6B7357972}|an-moi.vcxproj|D:\\Snake_game\\demo-repository\\an-moi\\an-moi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{162917FC-FFC3-4ABE-96DF-CFE6B7357972}|an-moi.vcxproj|solutionrelative:an-moi.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -28,11 +28,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "an-moi.cpp",
-              "DocumentMoniker": "D:\\Snake_game\\an-moi\\an-moi.cpp",
+              "DocumentMoniker": "D:\\Snake_game\\demo-repository\\an-moi\\an-moi.cpp",
               "RelativeDocumentMoniker": "an-moi.cpp",
-              "ToolTip": "D:\\Snake_game\\an-moi\\an-moi.cpp*",
+              "ToolTip": "D:\\Snake_game\\demo-repository\\an-moi\\an-moi.cpp*",
               "RelativeToolTip": "an-moi.cpp*",
-              "ViewState": "AgIAAB4AAAAAAAAAAAAAACIAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAAJkAAAAAAAAAAAAAAKYAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2025-04-22T06:02:33.845Z",
               "EditorCaption": ""
