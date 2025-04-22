@@ -1,8 +1,18 @@
-![Auto Assign](https://github.com/Zapyvotri-prj-ss004-10/demo-repository/actions/workflows/auto-assign.yml/badge.svg)
+# Branch `an-moi` 
 
-![Proof HTML](https://github.com/Zapyvotri-prj-ss004-10/demo-repository/actions/workflows/proof-html.yml/badge.svg)
+This branch focuses on the **fruit-eating logic** of the Snake game.
 
-# Welcome to your organization's demo respository
-This code repository (or "repo") is designed to demonstrate the best GitHub has to offer with the least amount of noise.
+## Goals:
+- Generate a fruit at a random position within the game area.
+- Detect when the snake's head touches the fruit.
+- Increase the score and grow the snake's length after eating.
+- Generate a new fruit after the previous one is eaten.
 
-The repo includes an `index.html` file (so it can render a web page), two GitHub Actions workflows, and a CSS stylesheet dependency.
+## Why a separate branch?
+Separating the fruit-eating feature helps to:
+- Isolate and test fruit collision and random generation without interfering with other logic.
+- Ensure the game reacts correctly when the snake eats a fruit.
+- Prepare the core gameplay loop for the full experience.
+---
+📌 Note:  
+This branch builds upon a base version that already includes the frame and snake movement. Make sure those parts are working before testing this one.
