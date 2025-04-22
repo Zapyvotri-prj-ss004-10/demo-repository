@@ -1,8 +1,6 @@
-![Auto Assign](https://github.com/Zapyvotri-prj-ss004-10/demo-repository/actions/workflows/auto-assign.yml/badge.svg)
+#Branch Menu-Score
 
-![Proof HTML](https://github.com/Zapyvotri-prj-ss004-10/demo-repository/actions/workflows/proof-html.yml/badge.svg)
+This branch foccuses on **creat a menu-score in the game frame** for the Snake Game in the console.
 
-# Welcome to your organization's demo respository
-This code repository (or "repo") is designed to demonstrate the best GitHub has to offer with the least amount of noise.
-
-The repo includes an `index.html` file (so it can render a web page), two GitHub Actions workflows, and a CSS stylesheet dependency.
+##Goals:
+-Display options for the players including: Stargame, Highscore, Exit
