@@ -1,18 +1,21 @@
-# Branch `an-moi` 
+# Snake Game Repository
 
-This branch focuses on the **fruit-eating logic** of the Snake game.
+## Feature Branches
 
-## Goals:
-- Generate a fruit at a random position within the game area.
-- Detect when the snake's head touches the fruit.
-- Increase the score and grow the snake's length after eating.
-- Generate a new fruit after the previous one is eaten.
+For modular development, the project is divided into:
+- `ve-khung` - Draws the game frame
+- `an-moi` - Implements fruit-eating functionality (current branch)
+- `di-chuyen` - Handles snake movement
+- `menu-score` - Manages menu and scoring
+- `main` - Primary branch for tested features
 
-## Why a separate branch?
-Separating the fruit-eating feature helps to:
-- Isolate and test fruit collision and random generation without interfering with other logic.
-- Ensure the game reacts correctly when the snake eats a fruit.
-- Prepare the core gameplay loop for the full experience.
----
+## Current Branch: `an-moi`
+
+### Fruit-Eating Implementation
+- Generates fruit at random positions
+- Detects snake-fruit collision
+- Increases score and snake length
+- Spawns new fruit after eating
+
 📌 Note:  
-This branch builds upon a base version that already includes the frame and snake movement. Make sure those parts are working before testing this one.
+This branch builds upon the base version with frame and movement. Ensure those are working before testing.
