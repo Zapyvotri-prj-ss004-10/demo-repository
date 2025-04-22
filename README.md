@@ -1,16 +1,35 @@
-# Branch Menu-Score
+# Snake Game Repository
 
-This branch foccuses on **Games Intructions** for the Snake Game in the console.
+## Branch Structure
 
-# Goals:
-- Display options for the players including: Stargame, Highscore, Exit
-- Guide players through options available in game
-- Display notification to players
+For modular development, the project is divided into:
+- `ve-khung` - Draws the game frame
+- `an-moi` - Implements fruit-eating functionality
+- `di-chuyen` - Handles snake movement
+- `menu-score` - Manages menu and scoring (current branch)
+- `main` - Primary branch for tested features
 
-# Why a separate branch? 
-****Separating the "Menu-Score" features helps to:
-- Easy to check and debug  without effecting other parts.
-- Features can be added easily.
+## Current Branch: `menu-score`
 
-# Note:
-  Test the programs to make sure there are no problems before moving on to the next stage.
+### Menu & Score Implementation
+- Displays game options: Start Game, Highscore, Exit
+- Guides players through available options
+- Shows game notifications
+
+### Why Separate Branch?
+- Isolated testing of menu functionality
+- Easier debugging without affecting other components
+- Simplified feature additions
+
+📌 Note:  
+Test thoroughly before merging with main branch.
+
+## Repository Setup
+- Includes `code-mau.exe` for C++ console rendering
+- Contains GitHub Actions workflows
+- Uses CSS stylesheet dependency
+
+### Quick Start:
+1. Clone repository:
+   ```bash
+   gh repo clone Zapyvotri-prj-ss004-10/demo-repository
