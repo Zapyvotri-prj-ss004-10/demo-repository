@@ -22,14 +22,25 @@ public:
         A[1].x = 11; A[1].y = 10;
         A[2].x = 12; A[2].y = 10;
     }
-void VeKhung() {
-    for (int i = MINX; i <= MAXX; i++) {
-        for (int j = MINY; j <= MAXY; j++) {
-            if (i == MINX || i == MAXX || j == MINY || j == MAXY) {
-                gotoxy(i, j);
-                cout << "+";
+    void VeKhung() {
+        for (int i = MINX; i <= MAXX; i++) {
+            for (int j = MINY; j <= MAXY; j++) {
+                if (i == MINX || i == MAXX) {
+                    gotoxy(i, j);
+                    cout << "-"; //ngang
+                }
+                if (j == MINY || j == MAXY) {
+                    gotoxy(i, j);
+                    cout << "|"; //dọc
+                }
             }
         }
+//Vẽ góc
+        gotoxy(MINX, MINY); cout << "+";
+        gotoxy(MAXX, MINY); cout << "+";
+        gotoxy(MINX, MAXY); cout << "+";
+        gotoxy(MAXX, MAXY); cout << "+";
+    }
     void Ve(){
         for (int i = 0; i < DoDai; i++){
             gotoxy(A[i].x,A[i].y);
@@ -62,6 +73,7 @@ int main()
             if (t=='x') Huong = 1;
         }
         system("cls");
+        r.VeKhung()
         r.Ve();
         r.DiChuyen(Huong);
         Sleep(300);
