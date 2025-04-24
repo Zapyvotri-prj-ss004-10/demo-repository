@@ -1,3 +1,6 @@
+/*
+ * Snake Game - Version 1.0.0 (24/04/2024)
+ */
 #include <iostream>
 #include <conio.h>
 #include <windows.h>
