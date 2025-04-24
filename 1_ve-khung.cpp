@@ -3,6 +3,11 @@
 #include <cstdlib>
 #include <conio.h>
 using namespace std;
+#define MINX 2
+#define MINY 2
+#define MAXX 20
+#define MAXY 15
+
 void gotoxy( int column, int line );
 struct Point{
     int x,y;
@@ -33,7 +38,21 @@ public:
 
     }
 };
-
+void VeKhung() {
+    for (int i = MINX; i <= MAXX; i++) {
+        gotoxy(i, MINY); cout << "-"; //trên
+        gotoxy(i, MAXY); cout << "-"; //dưới
+    }
+    for (int j = MINY; j <= MAXY; j++) {
+        gotoxy(MINX, j); cout << "|"; //trái
+        gotoxy(MAXX, j); cout << "|"; //phải
+    }
+    //vẽ góc
+    gotoxy(MINX, MINY); cout << "+";
+    gotoxy(MAXX, MINY); cout << "+";
+    gotoxy(MINX, MAXY); cout << "+";
+    gotoxy(MAXX, MAXY); cout << "+";
+}
 int main()
 {
     CONRAN r;
@@ -49,6 +68,7 @@ int main()
             if (t=='x') Huong = 1;
         }
         system("cls");
+        VeKhung();
         r.Ve();
         r.DiChuyen(Huong);
         Sleep(300);
@@ -56,8 +76,6 @@ int main()
 
     return 0;
 }
-
-
 void gotoxy( int column, int line )
   {
   COORD coord;
