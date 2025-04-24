@@ -22,25 +22,6 @@ public:
         A[1].x = 11; A[1].y = 10;
         A[2].x = 12; A[2].y = 10;
     }
-    void VeKhung() {
-        for (int i = MINX; i <= MAXX; i++) {
-            for (int j = MINY; j <= MAXY; j++) {
-                if (i == MINX || i == MAXX) {
-                    gotoxy(i, j);
-                    cout << "-"; //ngang
-                }
-                if (j == MINY || j == MAXY) {
-                    gotoxy(i, j);
-                    cout << "|"; //dọc
-                }
-            }
-        }
-//Vẽ góc
-        gotoxy(MINX, MINY); cout << "+";
-        gotoxy(MAXX, MINY); cout << "+";
-        gotoxy(MINX, MAXY); cout << "+";
-        gotoxy(MAXX, MAXY); cout << "+";
-    }
     void Ve(){
         for (int i = 0; i < DoDai; i++){
             gotoxy(A[i].x,A[i].y);
@@ -57,7 +38,21 @@ public:
 
     }
 };
-
+void VeKhung() {
+    for (int i = MINX; i <= MAXX; i++) {
+        gotoxy(i, MINY); cout << "-"; //trên
+        gotoxy(i, MAXY); cout << "-"; //dưới
+    }
+    for (int j = MINY; j <= MAXY; j++) {
+        gotoxy(MINX, j); cout << "|"; //trái
+        gotoxy(MAXX, j); cout << "|"; //phải
+    }
+    //vẽ góc
+    gotoxy(MINX, MINY); cout << "+";
+    gotoxy(MAXX, MINY); cout << "+";
+    gotoxy(MINX, MAXY); cout << "+";
+    gotoxy(MAXX, MAXY); cout << "+";
+}
 int main()
 {
     CONRAN r;
@@ -73,7 +68,7 @@ int main()
             if (t=='x') Huong = 1;
         }
         system("cls");
-        r.VeKhung()
+        VeKhung();
         r.Ve();
         r.DiChuyen(Huong);
         Sleep(300);
@@ -81,8 +76,6 @@ int main()
 
     return 0;
 }
-
-
 void gotoxy( int column, int line )
   {
   COORD coord;
