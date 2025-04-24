@@ -16,12 +16,9 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
 
-    - name: Set up CMake
-      uses: actions/setup-cmake@v2
-
-    - name: Install dependencies
+    - name: Install CMake and Visual Studio Build Tools
       run: |
-        choco install cmake
+        choco install cmake --version 3.21.0
         choco install visualstudio2019buildtools
 
     - name: Build project with CMake
@@ -34,4 +31,4 @@ jobs:
     - name: Run tests
       run: |
         cd build
-        .\test_example.exe  
+        .\test_example.exe   
