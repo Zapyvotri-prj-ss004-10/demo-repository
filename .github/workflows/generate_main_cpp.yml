@@ -1,0 +1,62 @@
+name: Generate main.cpp
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  generate_main_cpp:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+
+    - name: Tạo file main.cpp
+      run: |
+        echo "Tạo file main.cpp tự động..."
+        cat <<EOL > main.cpp
+#include <iostream>
+#include <conio.h>
+#include <windows.h>
+
+// Include các file .cpp tương ứng
+#include "menu-score/menu.cpp"
+#include "menu-score/score.cpp"
+#include "di-chuyen/di-chuyen.cpp"
+#include "an-moi/an-moi.cpp"
+
+using namespace std;
+
+int score = 0;
+
+int main() {
+    showMenu();
+    initGame();
+    drawMap();
+
+    while (true) {
+        if (_kbhit()) {
+            char key = _getch();
+            handleInput(key);
+        }
+
+        updateGame(score);
+        displayScore(score);
+
+        Sleep(100);
+    }
+
+    return 0;
+}
+EOL
+        echo "File main.cpp đã được tạo!"
+
+    - name: Push lại thay đổi
+      uses: ad-m/github-push-action@v0.6.0
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
