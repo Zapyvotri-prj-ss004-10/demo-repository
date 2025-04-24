@@ -10,7 +10,7 @@ on:
 
 jobs:
   generate_main_cpp:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest  # Môi trường Windows
 
     steps:
     - name: Check out code
@@ -19,43 +19,45 @@ jobs:
     - name: Tạo file main.cpp
       run: |
         echo "Tạo file main.cpp tự động..."
-        cat <<EOL > main.cpp
-#include <iostream>
-#include <conio.h>
-#include <windows.h>
-
-#include "menu-score/menu.cpp"
-#include "menu-score/score.cpp"
-#include "di-chuyen/di-chuyen.cpp"
-#include "an-moi/an-moi.cpp"
-
-using namespace std;
-
-int score = 0;
-
-int main() {
-    showMenu();
-    initGame();
-    drawMap();
-
-    while (true) {
-        if (_kbhit()) {
-            char key = _getch();
-            handleInput(key);
-        }
-
-        updateGame(score);
-        displayScore(score);
-
-        Sleep(100);
-    }
-
-    return 0;
-}
-EOL
+        echo "#include <iostream>" > main.cpp
+        echo "#include <conio.h>" >> main.cpp
+        echo "#include <windows.h>" >> main.cpp
+        echo "" >> main.cpp
+        echo "// Include các file .cpp tương ứng" >> main.cpp
+        echo "#include \"menu-score/menu.cpp\"" >> main.cpp
+        echo "#include \"menu-score/score.cpp\"" >> main.cpp
+        echo "#include \"di-chuyen/di-chuyen.cpp\"" >> main.cpp
+        echo "#include \"an-moi/an-moi.cpp\"" >> main.cpp
+        echo "" >> main.cpp
+        echo "using namespace std;" >> main.cpp
+        echo "" >> main.cpp
+        echo "int score = 0;" >> main.cpp
+        echo "" >> main.cpp
+        echo "int main() {" >> main.cpp
+        echo "    showMenu();" >> main.cpp
+        echo "    initGame();" >> main.cpp
+        echo "    drawMap();" >> main.cpp
+        echo "" >> main.cpp
+        echo "    while (true) {" >> main.cpp
+        echo "        if (_kbhit()) {" >> main.cpp
+        echo "            char key = _getch();" >> main.cpp
+        echo "            handleInput(key);" >> main.cpp
+        echo "        }" >> main.cpp
+        echo "" >> main.cpp
+        echo "        updateGame(score);" >> main.cpp
+        echo "        displayScore(score);" >> main.cpp
+        echo "" >> main.cpp
+        echo "        Sleep(100);" >> main.cpp
+        echo "    }" >> main.cpp
+        echo "" >> main.cpp
+        echo "    return 0;" >> main.cpp
+        echo "}" >> main.cpp
         echo "File main.cpp đã được tạo!"
 
-    - name: Push lại thay đổi
-      uses: ad-m/github-push-action@v0.6.0
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Commit file main.cpp và push lại
+      run: |
+        git add main.cpp
+        git commit -m "Tạo file main.cpp tự động"
+        git push origin main
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
