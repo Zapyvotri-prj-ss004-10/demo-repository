@@ -1,4 +1,4 @@
-name: C++ CI Workflow
+name: C++ CI on Windows
 
 on:
   push:
@@ -10,29 +10,28 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest 
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v2
-      
+
     - name: Set up CMake
-      uses: actions/setup-cmake@v2
+      uses: microsoft/setup-cmake@v1 
 
     - name: Install dependencies
       run: |
-        sudo apt-get update
-        sudo apt-get install -y g++
-        sudo apt-get install -y cmake
+        choco install cmake
+        choco install visualstudio2019buildtools
 
-    - name: Build project
+    - name: Build project with CMake
       run: |
         mkdir build
         cd build
         cmake ..
-        make
+        cmake --build .
 
     - name: Run tests
       run: |
         cd build
-        ./test_example 
+        .\test_example.exe  
