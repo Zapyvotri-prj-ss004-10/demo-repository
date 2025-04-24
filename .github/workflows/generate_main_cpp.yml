@@ -24,7 +24,6 @@ jobs:
 #include <conio.h>
 #include <windows.h>
 
-// Include các file .cpp tương ứng
 #include "menu-score/menu.cpp"
 #include "menu-score/score.cpp"
 #include "di-chuyen/di-chuyen.cpp"
