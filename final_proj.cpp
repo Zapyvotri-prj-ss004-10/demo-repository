@@ -44,11 +44,11 @@ public:
         cout << "@";
 
         // Than ran la X
+        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 10);
         for (int i = 1; i < DoDai; i++) {
             gotoxy(A[i].x, A[i].y);
             cout << "X";
         }
-        SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 10);
     }
     // di-chuyen
     void DiChuyen(int Huong) {
