@@ -1,5 +1,10 @@
 /*
- * Snake Game - Version 1.0.0 (24/04/2024)
+ * Snake Game - Version 1.0.1 (10/05/2025)
+ * Changelog:
+ * - Fixed flickering issue on screen refresh
+ * - Minor performance improvements
+ *
+ * Previous: Version 1.0.0 (24/04/2024)
  */
 #include <iostream>
 #include <conio.h>
