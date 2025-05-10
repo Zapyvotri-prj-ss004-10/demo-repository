@@ -194,8 +194,6 @@ int main() {
                     system("pause");
                     break;
                 }
-
-                system("cls");
                 VeKhung();
                 gotoxy(MINX, MAXY + 2);
                 cout << "Score: " << r.diem;
