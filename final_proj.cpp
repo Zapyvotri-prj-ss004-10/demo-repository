@@ -158,6 +158,7 @@ int main() {
 
         switch (choice) {
         case 1: {
+            system("cls");
             CONRAN r;
             Point Qua;
             Qua.x = rand() % (MAXX - MINX - 1) + MINX + 1;
