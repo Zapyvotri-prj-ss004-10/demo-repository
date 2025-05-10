@@ -169,11 +169,20 @@ int main() {
                     if (t == 'd' || t == 'D') Huong = 0;
                     if (t == 's' || t == 'S') Huong = 1;
                 }
-
+                //Xoa duoi cu truoc khi move
+                gotoxy(r.A[r.DoDai - 1].x, r.A[r.DoDai - 1].y);
+                cout << " ";
                 r.DiChuyen(Huong);
 
                 if (r.AnMoi(Qua)) {
                     Beep(1000, 100);
+                    //ve lai khung va moi khi an moi, khong xoa X
+                    Qua.x = rand() % (MAXX - MINX - 1) + MINX + 1;
+                    Qua.y = rand() % (MAXY - MINY - 1) + MINY + 1;
+                    gotoxy(Qua.x, Qua.y);
+                    cout << "*";
+                    gotoxy(MINX, MAXY + 2);
+                    cout << "Score: " << r.diem << "   ";
                 }
 
                 if (!firstMove && (r.ChocTuong() || r.ChocThan())) {
