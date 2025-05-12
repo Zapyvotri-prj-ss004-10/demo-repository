@@ -11,3 +11,26 @@ This is a **Snake Game** developed in **C++**, designed to run in a **console in
 - `ve-khung`: Draws the game boundary or frame.  
 - `di-chuyen`: Handles snake movement using keyboard input.  
 - `menu-score`: Implements the main menu and score display after gameplay.
+# Snake Game in C++ (Console Version)
+
+---
+
+## Main Source File
+
+- `final_proj.cpp`: Located in the `main` branch, this file contains the full source code with all integrated features.
+---
+## How to Run the Game
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/Zapyvotri-prj-ss004-10/demo-repository.git
+cd demo-repository
+### 2. Switch to the main branch
+```bash
+git checkout main
+### 3. Compile the program
+```bash
+g++ final_proj.cpp -o snake
+### 4. Run the game
+```bash
+./snake
