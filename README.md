@@ -1,4 +1,4 @@
-# Snake Game in C++ (Console Version)
+# 🐍 Snake Game in C++ (Console Version)
 
 This is a **Snake Game** developed in **C++**, designed to run in a **console interface**. The project is structured with multiple branches, each handling a specific feature, and later merged into the `main` branch for the complete version.
 
