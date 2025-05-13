@@ -21,20 +21,15 @@ This is a **Snake Game** developed in **C++**, designed to run in a **console in
 ---
 ## How to Run the Game
 
-###1. Clone the repository
-
-```bash
+### 1. Clone the repository
 git clone https://github.com/Zapyvotri-prj-ss004-10/demo-repository.git
 cd demo-repository
-###2. Switch to the main branch
 
-```bash
+### 2. Switch to the main branch
 git checkout main
-###3. Compile the program
 
-```bash
+### 3. Compile the program
 g++ final_proj.cpp -o snake
-###4. Run the game
 
-```bash
+### 4. Run the game
 ./snake
